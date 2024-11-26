@@ -1,5 +1,5 @@
 FROM rapidfort/python-chromedriver:latest
-WORKDIR /usr/app
+WORKDIR /opt/airflow
 
 # Install required system-level dependencies
 # RUN apt-get update && \
@@ -18,7 +18,10 @@ RUN pip install apache-airflow==2.10.3
 RUN pip install selenium bs4 azure-cli==2.65.0 webdriver_manager pandas
 
 # Copy your application code
-COPY ./ETL.py ./
+COPY ./ETL.py .
+COPY ./dags ./dags
+
+ENV AIRFLOW_HOME=/opt/airflow
 
 # Command to execute the script
 # CMD ["python3", "ETL.py"]
