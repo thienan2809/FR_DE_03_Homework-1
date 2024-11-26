@@ -12,8 +12,4 @@ The project creates a Docker container covering Selenium, Beautiful Soup, Azure 
 
 - Transform: process data using Pandas library.
 
-<<<<<<< HEAD
 - Load: export the processed data to a file named *university_ranking_result.csv* file.
-=======
-- Load: export the processed data to a file named *university_ranking_result.csv* file.
->>>>>>> origin
